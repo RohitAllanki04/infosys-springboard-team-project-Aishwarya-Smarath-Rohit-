@@ -1,0 +1,11 @@
+name,sku,category,currentStock,reorderLevel,vendor
+Laptop HP Pavilion,LP-HP-001,Electronics,150,50,TechSupply Co.
+Office Chair Ergonomic,OC-ERG-002,Furniture,75,20,FurniMart
+Wireless Mouse Logitech,WM-LG-003,Electronics,200,100,TechSupply Co.
+Coffee Beans Premium,CB-PR-004,Food & Beverages,500,200,FreshGoods Inc.
+Notebook A4 Ruled,NB-A4-005,Stationery,1000,300,OfficeMax
+USB Flash Drive 32GB,USB-32-006,Electronics,350,150,TechSupply Co.
+Standing Desk,SD-ADJ-007,Furniture,40,15,FurniMart
+Printer Paper A4,PP-A4-008,Stationery,800,250,OfficeMax
+Headphones Wireless,HP-WL-009,Electronics,120,40,TechSupply Co.
+Water Bottles 1L,WB-1L-010,Food & Beverages,600,200,FreshGoods Inc.
