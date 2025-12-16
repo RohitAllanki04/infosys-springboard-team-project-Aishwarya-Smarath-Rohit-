@@ -1,0 +1,19 @@
+Frontend: Consolidate navbars, remove duplication, prepare for backend integration
+
+What changed:
+- Consolidated `adminNavbar.jsx` and `userNavbar.jsx` logic into a single `Navbar.jsx` component that accepts a `role` prop and renders role-specific navigation links.
+- Updated `AuthLayout.jsx` to render the consolidated `Navbar` with the resolved role instead of rendering separate navbar components.
+- Kept `adminNavbar.jsx` and `userNavbar.jsx` as small re-export shims pointing to `Navbar.jsx` for backward compatibility (marked deprecated). This avoids breaking imports while removing duplicate implementation.
+- No UI/behavior changes intended; this is a refactor to remove duplication and simplify future maintenance and API integration.
+
+Why:
+- Reduces duplicated code and makes it easier to add API integrations and role-based behavior in one place.
+- Keeps the frontend self-contained and ready to integrate with the backend APIs you will build.
+
+Next steps (optional):
+- Remove the shim files (`adminNavbar.jsx`/`userNavbar.jsx`) entirely once all references are confirmed removed.
+- Run the app and verify navigation for different roles. Update `utils/roles.js` if you want consistent role comparisons (there is a minor mismatch in casing logic currently).
+- Connect `Navbar` links to real backend endpoints and verify authenticated flows.
+
+Suggested git commit message:
+"ref(frontend): consolidate navbars into single component, remove duplicate code, prepare for backend integration"

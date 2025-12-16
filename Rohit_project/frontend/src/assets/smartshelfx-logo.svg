@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="64" viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title desc" role="img">
+  <title id="title">SmartShelfX logo</title>
+  <desc id="desc">Purple bar-chart with an upward arrow and the text SmartShelfX</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7B4FBF" />
+      <stop offset="100%" stop-color="#6A3FA6" />
+    </linearGradient>
+  </defs>
+  <!-- Bars -->
+  <g transform="translate(8,8)">
+    <rect x="0" y="28" width="8" height="12" rx="1" fill="url(#g)" opacity="0.95"/>
+    <rect x="16" y="20" width="8" height="20" rx="1" fill="#7B4FBF" opacity="0.95"/>
+    <rect x="32" y="12" width="8" height="28" rx="1" fill="#7037C0" opacity="0.95"/>
+    <rect x="48" y="4" width="8" height="36" rx="1" fill="#6A3FA6" opacity="0.95"/>
+    <!-- Arrow -->
+    <path d="M14 24 C30 8, 58 -6, 88 2" stroke="#8B5CF6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="90,0 100,8 86,10" fill="#8B5CF6"/>
+  </g>
+  <!-- Text -->
+  <g transform="translate(96,40)">
+    <text x="0" y="0" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="20" fill="#3F3F46" font-weight="700">
+      <tspan fill="#4F46E5">Smart</tspan>ShelfX
+    </text>
+  </g>
+</svg>

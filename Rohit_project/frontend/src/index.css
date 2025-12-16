@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* Global button theme — neutral / Notion-like */
+/* Background: #F2F3F5, Text: #1A1A1A, Hover: #E6E7E9, Border: #D4D5D7 */
+button {
+	background-color: #F2F3F5 !important;
+	color: #1A1A1A !important;
+	border: 1px solid #D4D5D7 !important;
+	padding: 0.5rem 0.75rem !important;
+	border-radius: 0.375rem !important;
+	transition: background-color 150ms ease, color 150ms ease, opacity 150ms ease;
+}
+
+button:hover:not(:disabled) {
+	background-color: #E6E7E9 !important;
+}
+
+button:disabled {
+	opacity: 0.6 !important;
+	cursor: not-allowed !important;
+}
+
+/* Keep small/ghost buttons compact when they already have utility classes */
+button.btn-compact { padding: 0.25rem 0.5rem !important; }
+
+/* If any button should intentionally keep original styling, add data-unstyled attribute */
+[data-unstyled] { all: unset; }
+
+/* Reduce overall text size slightly for denser layout */
+html, body {
+	font-size: 14px; /* default was larger; smaller makes placeholders and labels smaller too */
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Arial';
+}
+
+/* Force button text to be black for better consistency (overrides text-white classes) */
+button, .btn, button[class*="btn"], .btn-primary, .btn-outline-primary {
+	color: #000 !important;
+}
+
+/* Ensure white-text utility classes on buttons are overridden */
+button.text-white, .btn.text-white, .text-white.btn {
+	color: #000 !important;
+}
+
+/* Inputs, selects, textareas and buttons: slightly smaller text for compact UI */
+input, textarea, select, button, .btn {
+	font-size: 0.9rem !important;
+}
+
+/* Compact input style for denser forms */
+.input-compact {
+	padding: 0.35rem 0.5rem !important;
+	font-size: 0.88rem !important;
+	border-radius: 0.5rem !important;
+	margin-bottom: 0.5rem !important;
+}
+
+/* Slightly smaller placeholders for compact inputs */
+.input-compact::placeholder {
+	font-size: 0.82rem;
+	opacity: 0.75;
+}
+
+/* Remove bottom margin when input is the last element in a form/group */
+.input-compact:last-child,
+.input-compact:only-child {
+	margin-bottom: 0 !important;
+}
+
+/* Brand purple variables and utility classes */
+:root {
+	--brand-purple: #6A3FA6;
+	--brand-purple-dark: #5b3188;
+	--text-default: #111111;
+}
+
+.brand-purple-bg {
+	background-color: var(--brand-purple) !important;
+}
+
+.brand-purple-hover:hover {
+	background-color: var(--brand-purple-dark) !important;
+}
+
+.brand-purple-text {
+	color: var(--brand-purple) !important;
+}
+
+.brand-purple-outline {
+	border: 1px solid var(--brand-purple) !important;
+}
+
+/* Ensure link hover using brand color when applied */
+.nav-link-brand-hover {
+	color: var(--text-default) !important;
+	transition: color 150ms ease-in-out, background 150ms ease-in-out;
+}
+
+.nav-link-brand-hover:hover {
+	color: var(--text-default) !important;
+}
+
+/* Active nav link (underline / bottom border) */
+.nav-active {
+	border-bottom: 2px solid var(--text-default) !important;
+	padding-bottom: 0.15rem;
+}
+
+/* Nav label visual style */
+.nav-label {
+	display: inline-block;
+	font-weight: 700 !important;
+	font-size: 1rem !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.6px !important;
+	padding: 0.25rem 0.6rem !important;
+	border-radius: 0.5rem !important;
+	color: var(--text-default) !important;
+	background: linear-gradient(90deg, rgba(106,63,166,0.06), rgba(106,63,166,0.02));
+	transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+	-webkit-font-smoothing: antialiased;
+}
+
+.nav-label:hover {
+	background: linear-gradient(90deg, rgba(106,63,166,0.12), rgba(106,63,166,0.04));
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(106,63,166,0.08);
+	color: var(--text-default) !important;
+}
+
+.nav-label:active {
+	transform: translateY(0);
+	box-shadow: none;
+}
+
+.nav-label:focus {
+	outline: 3px solid rgba(106,63,166,0.12) !important;
+	outline-offset: 2px !important;
+}
+
+/* Prevent underline on nav labels/links */
+.nav-link-brand-hover, .nav-label {
+	text-decoration: none !important;
+}
+
+.nav-link-brand-hover:hover, .nav-label:hover {
+	text-decoration: none !important;
+}
+
+/* Placeholder appearance: smaller and a bit muted */
+::placeholder {
+	font-size: 0.85rem;
+	opacity: 0.75;
+}
+
+/* Card / section compacting: reduce header/body padding and slightly smaller header text */
+.card {
+	--card-padding: 0.5rem;
+}
+.card .card-header {
+	padding: 0.5rem 0.75rem !important;
+	font-size: 0.95rem !important;
+}
+.card .card-body {
+	padding: 0.6rem !important;
+	font-size: 0.95rem !important;
+}
+
+/* Muted helper text smaller */
+.text-muted, .small, .text-small {
+	font-size: 0.82rem !important;
+}
+
+/* Tighten table cell padding for denser tables */
+.table td, .table th {
+	padding: 0.45rem 0.6rem !important;
+}
+
+/* Reduce spacing for buttons that are not primary focus */
+.btn-sm, .btn.btn-sm {
+	padding: 0.25rem 0.5rem !important;
+	font-size: 0.85rem !important;
+}
